@@ -1,7 +1,7 @@
 # MicroservicesProjectWith_Spring_Java_ElasticSearch_NetflixEureka
 ------------------ IBA CASE STUDY---------------------------------------------------------------------------------------------------
 
-Microservices Project which consist of tech stack by using Spring,Java,ElasticSearch, Netflix Eureka
+Microservices Project which consist of tech stack by using Spring,Java,Maven,ElasticSearch, Netflix Eureka
 
 Project Consists of 4 main components : 
 
