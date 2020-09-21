@@ -92,7 +92,7 @@ REQUEST :
 POST http://localhost:8080/product/saveAll
 
 
-[
+	[
 	{
 	   "name" : "TV",
 	   "category" : "Electronic",
@@ -144,7 +144,7 @@ GET  http://localhost:8080/product/getAllByPrice
 
 RESPONSE : Products with descending order of price
 
-{
+	{
     "content": [
         {
             "id": "EfF8sXQB2QIuxYEfua7X",
@@ -227,7 +227,7 @@ GET http://localhost:8080/product/getAllByInventory
 RESPONSE: A product with an Inventory lower than 5 cannot be listed on the platform (which is 4 in this case)
 
 
-[]
+	[]
 
 --------------------------------------------
 Example 4 :
@@ -239,7 +239,7 @@ Add 2 more item to DB(which has 4 item now) to make total count bigger than 5 an
 POST http://localhost:8080/product/saveAll
 
 
-[
+	[
 		{
 	   "name" : "Zara Winter Jacket",
 	   "category" : "Fashion",
@@ -272,7 +272,7 @@ GET http://localhost:8080/product/getAllByInventory
 
 RESPONSE: (Which is descending sorted accoırding to inventory)
 
-{
+	{
     "content": [
         {
             "id": "EvF8sXQB2QIuxYEfua7X",
