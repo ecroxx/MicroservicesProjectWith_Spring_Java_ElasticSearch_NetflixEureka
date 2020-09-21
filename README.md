@@ -214,6 +214,7 @@ RESPONSE : Products with descending order of price
     "first": true,
     "empty": false
 }
+
 ---------------------------------------
 Example3 : 
 
@@ -221,19 +222,11 @@ REQUEST:
 GET http://localhost:8080/product/getAllByInventory
 
 RESPONSE: A product with an Inventory lower than 5 cannot be listed on the platform (which is 4 in this case)
-[]
 
----------------------------------------
-Example4 : 
-
-REQUEST:
-GET http://localhost:8080/product/getAllByInventory
-
-RESPONSE: A product with an Inventory lower than 5 cannot be listed on the platform (which is 4 in this case)
 []
 
 --------------------------------------------
-Example 5 :
+Example 3 :
 
 Add 2 more item to DB(which has 4 item now) to make total count bigger than 5 and get sorted result of inventory.
 
