@@ -1,24 +1,28 @@
 # MicroservicesProjectWith_Spring_Java_ElasticSearch_NetflixEureka
------------------- IBA CASE STUDY---------------------------------------------------------------------------------------------------
+------------------ IBA CASE STUDY-----------------------------------------------------------------------------------
 
 Microservices Project which consist of tech stack by using Spring,Java,Maven,ElasticSearch, Netflix Eureka
 
 Project Consists of 4 main components : 
 
 1-) Service Discovery/Registry - Netflix Eureka 
+
 Tech Stack : Java/Spring + ElasticSearch + EurekaServer
 
 When the services/containers are created or spawned, they registers themself to the EurekaServer and the Eureka keeps the track of the instances; if a service is removed, the Eureka removes it from the manager's service registry. 
 If other services need to communicate with each other, it contacts a discovery service to get the instance of another service. 
 
 2-) Configuration Server
+
 Tech Stack : Java/Spring + ElasticSearch + Eureka Config Server
 
 Configuration Server aims to set up the Properties file centralized and shared by all Microservices.It is a Microservice and manages all microservices properties files and  those files are versioned controlled.
 Moreover any change in the properties will automatically publish to all microservices without restarting the services
 
 3-) Product Search Service 
+
 Tech Stack : Java/Spring + ElasticSearch + Eureka Client
+
 Microservice which has CRUD capalities on ElasticSearch instance/index by obtaining some criterias which are : 
   -Merchant can list products using a paging mechanism
   -Merchant can sort products by price and inventory (DESCENDING)
@@ -27,7 +31,9 @@ Microservice which has CRUD capalities on ElasticSearch instance/index by obtain
 
 
 4-) Merchant SignUp Service - Java/Spring + ElasticSearch
+
 Tech Stack : Java/Spring + ElasticSearch + Eureka Client
+
 Microservice which has CRUD capalities on ElasticSearch instance/index by obtaining some criterias which are : 
   -Open to anyone who has access to the app
   -Collect Merchant Type, Merchant Name, Owner Name, Address, Phone Number, Email Address, Password
@@ -35,21 +41,29 @@ Microservice which has CRUD capalities on ElasticSearch instance/index by obtain
 ------------FURTHER SERVICES WHICH ARE NOT IMPLEMENTED------------------------------------------------------------------
 
 5-)In memory Cache 
+
 Tech Stack : Redis / Redisson Java Client
+
 One Redis cluster in order to create centeralized and externalized data storage for session/cookies data and user related data(Password etc.)
 Second redis cluster for caching elasticSearch result as a object for performance improvements.
 
 
 6-)SignIn Services
+
 Tech Stack : Java/Spring + ElasticSearch + Eureka Client
+
 Business service for sign in purpose
 
 7-) Authentication/Authorization Services
+
 Tech Stack : Java/Spring Security + SQL Databse(Postgresql/Oracle/MySQL etc)
+
 Security services
 
 8-) FrontEnd -Web Application
+
 Tech Stack : Java/Spring + JSF/Thymeleaf/Vue.js etc
+
 Fronend service for user interraction
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -57,35 +71,51 @@ NOTE:
 The Application Should be Dockerized.For undockerized version of app please change configuration setting as follow:
 
 1-) Config server 
-Open bootstrap.properties under src/main/resources and change
-"spring.cloud.config.server.native.searchLocations:" variable's value as a your centeralize resource path 
+
+Open bootstrap.properties under src/main/resources and change below variable's value as a your centeralize resource path 
+
+"spring.cloud.config.server.native.searchLocations:" 
+
+
 
 2-) Product Listing Service 
 - Open bootstrap.properties under src/main/resources and check parameters value below. If you dont change ports value do not make any change.
+
 "spring.cloud.config.uri="
+
 "eureka.client.service-url.defaultZone=" 
 
-- Open application.properties under src/main/resources and change
+- Open application.properties under src/main/resources and change below variables's values.
+
 "spring.data.elasticsearch.cluster-name="
-"spring.data.elasticsearch.cluster-nodes=" variable's values. 
+
+"spring.data.elasticsearch.cluster-nodes="  
+
 For cluster naming you should add cluster name to your local elasticsearch config.yaml file first then you should add in an application.properties file as a enviroment variable.
 
 3-) Service Discovery
+
 - Open bootstrap.properties under src/main/resources and check parameters value below. If you dont change ports value do not make any change.
+
 "eureka.client.service-url.defaultZone=" 
 
 4-) SingUp Service
+
 - Open application.properties under src/main/resources and check parameters value below. If you dont change ports value do not make any change.Be sure about you created cluster in elasticsearch config file !
+
 "server.port="
+
 "spring.cloud.config.uri="
+
 "eureka.client.service-url.defaultZone="
+
 - Open application.yaml under src/main/resources and check parameters. If you do not change ports value do not make any change.
 
 5-)Start Elasticsearch instance
 
 6-)Make query to endpoints in service controllers by using POSTMAN etc.
--------------------------------------------------------------------------------------------------------------------------------
------------------------SOME POSTMAN REQUEST EXAMPLES---------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------SOME POSTMAN REQUEST EXAMPLES--------------------------------------------------------
 Some Request Example of Product Listing Service with Pagination(10)
 
 --Example1 :-- 
