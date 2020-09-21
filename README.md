@@ -86,7 +86,9 @@ For cluster naming you should add cluster name to your local elasticsearch confi
 6-)Make query to endpoints in service controllers by using POSTMAN etc.
 -------------------------------------------------------------------------------------------------------------------------------
 -----------------------SOME POSTMAN REQUEST EXAMPLES---------------------------------------------------------------------------
-Example1: Product Listing Service with Pagination(10)
+Some Request Example of Product Listing Service with Pagination(10)
+
+--Example1:-- 
 
 REQUEST : 
 POST http://localhost:8080/product/saveAll
@@ -139,11 +141,13 @@ RESPONSE:
 Records saved in the db.
 
 --------------------------------------------------
-Example2:
+
+--Example2:--
 REQUEST: 
 GET  http://localhost:8080/product/getAllByPrice
 
-RESPONSE : Products with descending order of price
+RESPONSE : 
+//Products with descending order of price
 
 	{
     "content": [
@@ -220,18 +224,19 @@ RESPONSE : Products with descending order of price
 }
 
 ---------------------------------------
-Example3 : 
+--Example3 :-- 
 
 REQUEST:
 GET http://localhost:8080/product/getAllByInventory
 
-RESPONSE: A product with an Inventory lower than 5 cannot be listed on the platform (which is 4 in this case)
+RESPONSE: 
+// A product with an Inventory lower than 5 cannot be listed on the platform (which is 4 in this case)
 
 
 	[]
 
 --------------------------------------------
-Example 4 :
+--Example 4 :--
 
 Add 2 more item to DB(which has 4 item now) to make total count bigger than 5 and get sorted result of inventory.
 
@@ -271,7 +276,8 @@ Records saved in the db.
 REQUEST:
 GET http://localhost:8080/product/getAllByInventory
 
-RESPONSE: (Which is descending sorted accoırding to inventory)
+RESPONSE: 
+// Descending sorted order according to inventory
 
 	{
     "content": [
