@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven-archiver (1)" />
+        <module name="maven-archiver (2)" />
+        <module name="Springbootelasticsearchtutorial (1)" />
+        <module name="Springbootelasticsearchtutorial (2)" />
+        <module name="Springbootelasticsearchtutorial (3) (com.springboot.elasticsearch)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="Springbootelasticsearchtutorial (3)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
