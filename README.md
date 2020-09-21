@@ -90,7 +90,9 @@ Example1: Product Listing Service with Pagination(10)
 
 REQUEST : 
 POST http://localhost:8080/product/saveAll
-	[
+
+
+[
 	{
 	   "name" : "TV",
 	   "category" : "Electronic",
@@ -224,6 +226,7 @@ GET http://localhost:8080/product/getAllByInventory
 
 RESPONSE: A product with an Inventory lower than 5 cannot be listed on the platform (which is 4 in this case)
 
+
 []
 
 --------------------------------------------
@@ -236,7 +239,7 @@ Add 2 more item to DB(which has 4 item now) to make total count bigger than 5 an
 POST http://localhost:8080/product/saveAll
 
 
-	[
+[
 		{
 	   "name" : "Zara Winter Jacket",
 	   "category" : "Fashion",
@@ -268,6 +271,7 @@ REQUEST:
 GET http://localhost:8080/product/getAllByInventory
 
 RESPONSE: (Which is descending sorted accoırding to inventory)
+
 {
     "content": [
         {
