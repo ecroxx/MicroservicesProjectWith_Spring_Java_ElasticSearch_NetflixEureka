@@ -88,7 +88,7 @@ For cluster naming you should add cluster name to your local elasticsearch confi
 -----------------------SOME POSTMAN REQUEST EXAMPLES---------------------------------------------------------------------------
 Some Request Example of Product Listing Service with Pagination(10)
 
---Example1:-- 
+--Example1 :-- 
 
 REQUEST : 
 POST http://localhost:8080/product/saveAll
@@ -142,8 +142,10 @@ Records saved in the db.
 
 --------------------------------------------------
 
---Example2:--
+--Example2 :--
+
 REQUEST: 
+
 GET  http://localhost:8080/product/getAllByPrice
 
 RESPONSE : 
