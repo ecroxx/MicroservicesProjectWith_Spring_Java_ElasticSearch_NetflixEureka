@@ -227,7 +227,7 @@ RESPONSE: A product with an Inventory lower than 5 cannot be listed on the platf
 []
 
 --------------------------------------------
-Example 3 :
+Example 4 :
 
 Add 2 more item to DB(which has 4 item now) to make total count bigger than 5 and get sorted result of inventory.
 
